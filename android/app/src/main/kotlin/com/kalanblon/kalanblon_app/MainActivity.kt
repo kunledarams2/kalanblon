@@ -1,4 +1,4 @@
-package com.example.kalanblon_app
+package com.kalanblon.kalanblon_app
 
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity

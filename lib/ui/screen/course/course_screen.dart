@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:html_unescape/html_unescape.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
+// import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:masterstudy_app/data/models/OrdersResponse.dart';
 import 'package:masterstudy_app/data/models/category.dart';
 import 'package:masterstudy_app/data/models/course/CourcesResponse.dart';
@@ -145,7 +145,7 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
     _bloc = BlocProvider.of<CourseBloc>(context)
       ..add(FetchEvent(widget.coursesBean.id));
 
-    _initInApp();
+    // _initInApp();
   }
 
   @override
@@ -520,7 +520,7 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
               height: 40,
               color: mainColor,
               onPressed: () {
-                if (state is LoadedCourseState) {
+                /*if (state is LoadedCourseState) {
                   if (Platform.isIOS) {
                     if (_products.isNotEmpty) {
                       PurchaseParam purchaseParam =
@@ -541,7 +541,7 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
                       }
                     }
                   }
-                }
+                }*/
               },
               child: setUpButtonChild(state),
             )
@@ -600,9 +600,7 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
                 selectedPlan = value.name;
             });
           }
-          if (_products.isNotEmpty)
-            selectedPlan =
-                "${localizations.getLocalization("course_regular_price")} ${_products[0].price}";
+          // if (_products.isNotEmpty) selectedPlan = "${localizations.getLocalization("course_regular_price")} ${_products[0].price}";
           return GestureDetector(
             onTap: () async {
               if (!Platform.isIOS) {
@@ -702,13 +700,13 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
 
   @override
   void dispose() {
-    _subscription.cancel();
+    // _subscription.cancel();
     super.dispose();
   }
 
   //InApp
 
-  final InAppPurchaseConnection _connection = InAppPurchaseConnection.instance;
+/*  final InAppPurchaseConnection _connection = InAppPurchaseConnection.instance;
   StreamSubscription<List<PurchaseDetails>> _subscription;
   List<String> _notFoundIds = [];
   List<ProductDetails> _products = [];
@@ -834,5 +832,5 @@ class _CourseScreenWidgetState extends State<_CourseScreenWidget>
     setState(() {
       //_purchasePending = false;
     });
-  }
+  }*/
 }

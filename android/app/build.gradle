@@ -36,7 +36,7 @@ if (keystorePropertiesFile.exists()) {
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -47,9 +47,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.kalanblon_app"
+        applicationId "com.kalanblon.kalanblon_app"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
 
     // Add the Firebase SDK for Crashlytics.
-    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+//    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
     implementation 'com.google.firebase:firebase-messaging:20.2.0'
 
     testImplementation 'junit:junit:4.12'

@@ -1,9 +1,8 @@
-package com.example.kalanblon_app
+package com.kalanblon.kalanblon_app
 
 import io.flutter.app.FlutterApplication
 //import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugin.common.PluginRegistry.PluginRegistrantCallback
-import io.flutter.plugins.GeneratedPluginRegistrant
 import io.flutter.plugins.firebasemessaging.FlutterFirebaseMessagingService
 
 class App(): FlutterApplication(), PluginRegistrantCallback{

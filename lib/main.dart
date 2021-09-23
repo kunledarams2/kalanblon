@@ -6,7 +6,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
+// import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:inject/inject.dart';
 import 'package:masterstudy_app/data/repository/localization_repository.dart';
 import 'package:masterstudy_app/theme/theme.dart';
@@ -291,13 +291,13 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  StreamSubscription<List<PurchaseDetails>> _subscription;
+  // StreamSubscription<List<PurchaseDetails>> _subscription;
 
   /// Is the API available on the device
   bool _available = true;
 
   /// The In App Purchase plugin
-  InAppPurchaseConnection _iap = InAppPurchaseConnection.instance;
+ /* InAppPurchaseConnection _iap = InAppPurchaseConnection.instance;
 
   /// Products for sale
   List<ProductDetails> _products = [];
@@ -380,7 +380,7 @@ class MyAppState extends State<MyApp> {
   void dispose() {
     _subscription.cancel();
     super.dispose();
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {

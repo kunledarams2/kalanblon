@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:426536014819:android:ff547b44cc14aa23ef86d6",
+        "mobilesdk_app_id": "1:426536014819:android:19d3067129eaccfeef86d6",
         "android_client_info": {
-          "package_name": "com.example.kalanblon_app"
+          "package_name": "com.kalanblon"
         }
       },
       "oauth_client": [
@@ -36,9 +36,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:426536014819:android:19d3067129eaccfeef86d6",
+        "mobilesdk_app_id": "1:426536014819:android:cebc73d137e36b7eef86d6",
         "android_client_info": {
-          "package_name": "com.kalanblon"
+          "package_name": "com.kalanblon.kalanblon_app"
         }
       },
       "oauth_client": [
