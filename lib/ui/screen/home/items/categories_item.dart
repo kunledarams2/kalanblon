@@ -25,11 +25,11 @@ class CategoriesWidget extends StatelessWidget {
       children: <Widget>[
         Padding(
             padding: const EdgeInsets.only(top: 30.0, left: 30.0),
-            child: Text(title,
+            child: Text("Module",
                 textScaleFactor: 1.0,
                 style: Theme.of(context)
                     .primaryTextTheme
-                    .subtitle1
+                    .headline1
                     .copyWith(color: dark, fontStyle: FontStyle.normal))),
         _buildList(context)
       ],

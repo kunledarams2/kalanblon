@@ -70,7 +70,7 @@ class _FavoritesScreenWidgetState extends State<_FavoritesScreenWidget> {
             child: Text(
               localizations.getLocalization("favorites_title"),
               textScaleFactor: 1.0,
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white,fontSize: 20),
             ),
           ),
         ),

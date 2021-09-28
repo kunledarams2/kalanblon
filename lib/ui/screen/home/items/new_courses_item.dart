@@ -30,7 +30,7 @@ class NewCoursesWidget extends StatelessWidget {
               Padding(
                   padding:
                       const EdgeInsets.only(top: 30.0, left: 30.0, bottom: 20),
-                  child: Text(title,
+                  child: Text("Nouveaux cours",
                       textScaleFactor: 1.0,
                       style: Theme.of(context)
                           .primaryTextTheme
@@ -144,7 +144,7 @@ class NewCoursesWidget extends StatelessWidget {
                     unescape.convert(title),
                     textScaleFactor: 1.0,
                     maxLines: 2,
-                    style: TextStyle(fontSize: 22, color: dark),
+                    style: TextStyle(fontSize: 20, color: dark),
                   ),
                 ),
               ),
@@ -203,9 +203,10 @@ class NewCoursesWidget extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(left: 18.0),
         child: Text(
-          localizations.getLocalization("free_course_item"),
+          "Gratuit",
+          // localizations.getLocalization("free_course_item"),
           textScaleFactor: 1.0,
-          style: Theme.of(context).primaryTextTheme.headline1.copyWith(
+          style: Theme.of(context).primaryTextTheme.headline2.copyWith(
               color: dark,
               fontStyle: FontStyle.normal,
               fontWeight: FontWeight.bold),

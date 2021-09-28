@@ -27,7 +27,7 @@ import 'package:masterstudy_app/data/models/user_course.dart';
 @provide
 @singleton
 class UserApiProvider {
-  static const BASE_URL = "https://stylemixthemes.com/masterstudy/academy";
+  static const BASE_URL = "https://kalanyoro.com";
   static const String apiEndpoint = BASE_URL + "/wp-json/ms_lms/v1/";
   final Dio _dio;
 

@@ -176,14 +176,17 @@ class _CourseWidget extends StatelessWidget {
                   },
                   child: Hero(
                     tag: postsBean.course_id,
-                    child: CachedNetworkImage(
-                      imageUrl: postsBean.app_image,
-                      placeholder:(ctx,url) => SizedBox(
+
+                    child: Image.network(
+                      postsBean.app_image != null ? postsBean.app_image: "empty_courses.svg"
+                      /*
+                       imageUrl: postsBean.app_image,
+                    placeholder:(ctx,url) => SizedBox(
                         height: imgHeight,
                       ),
                       width: double.infinity,
                       height: imgHeight,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.cover,*/
                     ),
                   ),
                 ),

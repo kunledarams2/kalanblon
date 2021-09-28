@@ -401,7 +401,7 @@ class MyAppState extends State<MyApp> {
       create: (BuildContext context) => widget.profileBloc(),
       child: OverlaySupport(
         child: MaterialApp(
-          title: 'Masterstudy',
+          title: 'KalanBlon',
           theme: widget._buildShrineTheme(),
           initialRoute: SplashScreen.routeName,
           debugShowCheckedModeBanner: false,

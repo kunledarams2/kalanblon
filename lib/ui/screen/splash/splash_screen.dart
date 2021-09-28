@@ -71,8 +71,10 @@ class SplashWidgetState extends State<SplashWidget> {
       } else {
 
         if(state.appSettings!=null) {
+          // openMainPage(state.appSettings.options);
           openAuthPage(state.appSettings.options);
         }else{
+          // openMainPage(state.appSettings.options);
           openAuthPage(null);
         }
       }

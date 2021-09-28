@@ -41,7 +41,7 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
           title: Text(
             localizations.getLocalization("search_title"),
             textScaleFactor: 1.0,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           bottom: PreferredSize(
               preferredSize: const Size.fromHeight(kToolbarHeight + 16),
@@ -135,7 +135,7 @@ class SearchScreenWidgetState extends State<SearchScreenWidget> {
                   textScaleFactor: 1.0,
                   style: Theme.of(context)
                       .primaryTextTheme
-                      .headline1
+                      .headline2
                       .copyWith(color: dark, fontStyle: FontStyle.normal))),
           _buildCourses(state)
         ],

@@ -154,8 +154,9 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                           children: <Widget>[
                             Hero(
                                 tag: widget.args.course_id,
-                                child: CachedNetworkImage(
-                                  imageUrl: widget.args.app_image,
+                                child: Image.network(
+                                  widget.args.app_image
+                                  /*imageUrl: widget.args.app_image,
                                   placeholder: (ctx, url) => SizedBox(
                                     height:
                                         MediaQuery.of(context).size.height / 3 +
@@ -165,7 +166,7 @@ class UserCourseWidgetState extends State<UserCourseWidget> {
                                   height:
                                       MediaQuery.of(context).size.height / 3 +
                                           MediaQuery.of(context).padding.top,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.cover,*/
                                 )),
                             Container(
                               decoration: BoxDecoration(

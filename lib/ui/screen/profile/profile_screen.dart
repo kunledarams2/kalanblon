@@ -178,12 +178,12 @@ class _ProfileScreenWidgetState extends State<ProfileScreenWidget> {
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(60.0),
-                child: Image.network(
-                  state.account.avatar_url,
+                child:Text("")/* Image.network(
+                  state.account.avatar_url !=null? state.account.avatar_url:"",
                   fit: BoxFit.cover,
                   height: 50.0,
-                  width: 50.0,
-                ),
+                  width: 50.0,*/
+                // ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),

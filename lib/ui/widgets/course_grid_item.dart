@@ -78,17 +78,17 @@ class CourseGridItem extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context)
                             .primaryTextTheme
-                            .subtitle1
+                            .headline2
                             .copyWith(color: Colors.black.withOpacity(0.5)),
                       )),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 4.0),
-                  child: Text(unescape.convert(coursesBean.title) + '\n',
+                  child: Text( coursesBean.title != "null"? unescape.convert(coursesBean.title) + '\n':"",
                       maxLines: 2,
                       textScaleFactor: 1,
                       style:
-                          Theme.of(context).primaryTextTheme.subtitle1.copyWith(
+                          Theme.of(context).primaryTextTheme.headline2.copyWith(
                                 color: Colors.black,
                               )),
                 ),
@@ -139,10 +139,10 @@ class CourseGridItem extends StatelessWidget {
         children: <Widget>[
           Text(
             coursesBean.price.free
-                ? localizations.getLocalization("free_course_item")
+                ? "Gratuit"
                 : coursesBean.price.price,
             textScaleFactor: 1.0,
-            style: Theme.of(context).primaryTextTheme.subtitle1.copyWith(
+            style: Theme.of(context).primaryTextTheme.headline2.copyWith(
                 color: dark,
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.bold),
