@@ -60,16 +60,16 @@ class AuthScreenWidgetState extends State<AuthScreenWidget> {
             title: Center(
               child: Padding(
                 padding: const EdgeInsets.only(top:0.0),
-                child: CachedNetworkImage(
-                  imageUrl: appLogoUrl,
-                  placeholder: (context, url) => CircularProgressIndicator(),
+                child: Image.network(
+                /*  imageUrl: */appLogoUrl,width: 50,
+                /*  placeholder: (context, url) => CircularProgressIndicator(),
                   errorWidget: (context, url, error) => SizedBox(
                       width: 50.0,
                       child: Image(
                           image: AssetImage('assets/icons/logo.png')
                       )
                   ),
-                  width: 50.0,
+                  width: 50.0,*/
                 ),
               ),
             ),
@@ -100,6 +100,7 @@ class AuthScreenWidgetState extends State<AuthScreenWidget> {
         ),
         body: TabBarView(
           children: <Widget>[
+
             ListView(
               children: <Widget>[_SignUpPage(widget.optionsBean)],
             ),
@@ -170,6 +171,7 @@ class _SignUpPageState extends State<_SignUpPage> {
                       labelText: localizations.getLocalization("login_label_text"),
                       helperText: localizations.getLocalization("login_registration_helper_text"),
                       filled: true),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   validator: (value) {
                     if (value.isEmpty) {
                       return localizations.getLocalization("login_empty_error_text");
@@ -188,6 +190,7 @@ class _SignUpPageState extends State<_SignUpPage> {
                       labelText: localizations.getLocalization("email_label_text"),
                       helperText: localizations.getLocalization("email_helper_text"),
                       filled: true),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   validator: _validateEmail,
                 ),
               ),
@@ -215,6 +218,7 @@ class _SignUpPageState extends State<_SignUpPage> {
                         },
                         color: mainColor,
                       )),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   validator: (value) {
                     if (value.isEmpty) {
                       return localizations.getLocalization("password_empty_error_text");
@@ -272,6 +276,8 @@ class _SignUpPageState extends State<_SignUpPage> {
             content: Text(
               text,
               textScaleFactor: 1.0,
+              style: TextStyle(color: Colors.black, fontSize: 16),
+
             ),
             actions: <Widget>[
               FlatButton(
@@ -413,6 +419,7 @@ class _SignInPageState extends State<_SignInPage> {
                       labelText: localizations.getLocalization("login_label_text"),
                       helperText: localizations.getLocalization("login_sign_in_helper_text"),
                       filled: true),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   validator: (value) {
                     if (value.isEmpty) {
                       return localizations.getLocalization("login_sign_in_helper_text");
@@ -445,6 +452,7 @@ class _SignInPageState extends State<_SignInPage> {
                         },
                         color: mainColor,
                       )),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                   validator: (value) {
                     if (value.isEmpty) {
                       return localizations.getLocalization("password_sign_in_helper_text");
@@ -496,7 +504,8 @@ class _SignInPageState extends State<_SignInPage> {
                 textScaleFactor: 1.0,
                 style: TextStyle(color: Colors.black, fontSize: 20.0)
             ),
-            content: Text(text),
+            content: Text(text,
+                style: TextStyle(color: Colors.black, fontSize: 16.0)),
             actions: <Widget>[
               FlatButton(
                 child: Text(

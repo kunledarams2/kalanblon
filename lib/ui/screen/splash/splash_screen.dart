@@ -1,6 +1,3 @@
-import 'dart:ffi';
-
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -63,17 +60,16 @@ class SplashWidgetState extends State<SplashWidget> {
 
     if (state is CloseSplash) {
       if (state.isSigned) {
-        if(state.appSettings!=null) {
+        if (state.appSettings != null) {
           openMainPage(state.appSettings.options);
-        }else{
+        } else {
           openMainPage(null);
         }
       } else {
-
-        if(state.appSettings!=null) {
+        if (state.appSettings != null) {
           // openMainPage(state.appSettings.options);
           openAuthPage(state.appSettings.options);
-        }else{
+        } else {
           // openMainPage(state.appSettings.options);
           openAuthPage(null);
         }
@@ -84,7 +80,7 @@ class SplashWidgetState extends State<SplashWidget> {
         imgUrl = (state.appSettings.options.logo == null)
             ? ""
             : state.appSettings.options.logo;
-        if(state.appSettings.demo != null){
+        if (state.appSettings.demo != null) {
           demoEnabled = state.appSettings.demo;
         }
         if (state.appSettings.addons != null)
@@ -99,14 +95,19 @@ class SplashWidgetState extends State<SplashWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          CachedNetworkImage(
-            imageUrl: imgUrl,
-            placeholder: (context, url) => CircularProgressIndicator(),
+          Image.network(
+              /* imageUrl:*/
+              imgUrl,
+              /* placeholder: (context, url) => CircularProgressIndicator(),
             errorWidget: (context, url, error) => SizedBox(
                 width: 83.0,
-                child: Image(image: AssetImage('assets/icons/logo.png'))),
-            width: 83.0,
-          ),
+                child: Image(image: AssetImage('assets/icons/logo.png'))),*/
+              width: 83.0,
+              errorBuilder: (context, error, stackTrace) {
+            return Image.asset(
+              'assets/icons/logo.png',
+            );
+          }),
           Padding(
             padding: EdgeInsets.only(top: 20.0, bottom: 5.0),
             child: Text(
@@ -118,7 +119,7 @@ class SplashWidgetState extends State<SplashWidget> {
           Padding(
             padding: EdgeInsets.only(bottom: 0),
             child: Text(
-              (postsCount != "") ? "COURSES" : "",
+              (postsCount != "") ? "COURS" : "",
               textScaleFactor: 1.0,
               style: TextStyle(
                   color: HexColor.fromHex("#000000"),

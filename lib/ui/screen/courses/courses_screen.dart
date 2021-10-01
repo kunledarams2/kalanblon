@@ -178,7 +178,11 @@ class _CourseWidget extends StatelessWidget {
                     tag: postsBean.course_id,
 
                     child: Image.network(
-                      postsBean.app_image != null ? postsBean.app_image: "empty_courses.svg"
+                      postsBean.app_image != null ? postsBean.app_image: "empty_courses.svg",
+                      fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: imgHeight
+
                       /*
                        imageUrl: postsBean.app_image,
                     placeholder:(ctx,url) => SizedBox(

@@ -96,8 +96,10 @@ class AssignmentDraftWidgetState extends State<AssignmentDraftWidget> {
                                                         labelText: widget.assignmentResponse.translations.title,
                                                         alignLabelWithHint: true,
                                                         filled: true,
+
                                                         fillColor: HexColor.fromHex("#F6F6F6"),
                                                     ),
+                                                  style: TextStyle(color: Colors.black, fontSize: 16),
                                                 )
                                             ),
                                             Padding(
@@ -116,7 +118,9 @@ class AssignmentDraftWidgetState extends State<AssignmentDraftWidget> {
                                                         alignLabelWithHint: true,
                                                         filled: true,
                                                         fillColor: HexColor.fromHex("#F6F6F6"),
+
                                                     ),
+                                                  style: TextStyle(color: Colors.black, fontSize: 16),
                                                 )
                                             ),
                                             Padding(
@@ -233,8 +237,6 @@ class AssignmentDraftWidgetState extends State<AssignmentDraftWidget> {
                                                         ),
                                                     ],
                                                 )
-
-
 
                                             ),
                                         ),
