@@ -50,8 +50,8 @@ android {
         applicationId "com.kalanblon.kalanblon_app"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode /*flutterVersionCode.toInteger()*/ 30
-        versionName /*flutterVersionName*/ "1.3.5"
+        versionCode /*flutterVersionCode.toInteger()*/ 31
+        versionName /*flutterVersionName*/ "1.3.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
